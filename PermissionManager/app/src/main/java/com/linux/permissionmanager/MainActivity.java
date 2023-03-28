@@ -47,7 +47,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String rootKey = "QIXFlqGABTGOu1Mk6QdNDDViMkzgPh8FMF0ioJJl2iHRC7DG";
+    private String rootKey = "wxqI1MByBPNTLPwgzEsoVE9RRvvZIZNJ4XKEZnnYaPjHUURy";
     private String suBasePath = "/data/local/tmp";
     private String lastInputCmd = "id";
 
@@ -104,29 +104,8 @@ public class MainActivity extends AppCompatActivity {
         get_root_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                final EditText inputKey = new EditText(MainActivity.this);
-                inputKey.setText(rootKey);
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setCancelable(false);
-                builder.setTitle("请输入ROOT权限的KEY").setIcon(android.R.drawable.ic_dialog_info).setView(inputKey)
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                rootKey = inputKey.getText().toString();
-                                //数值保存到本地
-                                SharedPreferences.Editor mEdit = m_shareSave.edit();
-                                mEdit.putString("rootKey", rootKey);
-                                mEdit.commit();
-                            }
-
-                            ;
-                        });
-                builder.show();
-
                 int ret = getRoot(rootKey);
                 showConsoleMsg("getRoot: " + ret);
-
-                findViewById(R.id.su_env_install_btn).setEnabled(false);
             }
         });
 
