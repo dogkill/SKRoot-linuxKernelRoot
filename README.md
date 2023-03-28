@@ -9,8 +9,6 @@
 ### 	6.注入su到指定进程
 ### 	7.完全卸载清理su
 
-此作品尚未对外正式发布，目前开发进度：100%，待我挑个良辰吉日再对外发布。
-
 ![image](https://github.com/abcz316/linuxKernelRoot/blob/master/ScreenCap/1.png)
 ![image](https://github.com/abcz316/linuxKernelRoot/blob/master/ScreenCap/2.png)
 ![image](https://github.com/abcz316/linuxKernelRoot/blob/master/ScreenCap/3.png)
